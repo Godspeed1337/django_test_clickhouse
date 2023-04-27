@@ -1,0 +1,6 @@
+<form action="{% url 'clickhouse:add' %}" method="post">
+{% csrf_token %}
+    <input type="text" name="value">
+    <input type="number" name="metric">
+    <input type="submit" value="add">
+</form>

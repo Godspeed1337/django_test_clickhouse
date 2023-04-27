@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  db:
+    image: clickhouse/clickhouse-server
+    ports:
+      - 8123:8123
+    environment:
+      CLICKHOUSE_DB: my_database
+      CLICKHOUSE_USER: username
+      CLICKHOUSE_PASSWORD: password
+    volumes:
+      - db:/var/lib/clickhouse/
+
+volumes:
+  db:
